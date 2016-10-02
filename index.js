@@ -1,6 +1,6 @@
 var fs = require("fs");
-var filename = 'public/index.html';
-var data = fs.readFileSync(filename);
+var filename = './fundstarter/public/index.html';
+var data = fs.readFileSync(filename,'utf8');
 
 function start(resp){
     resp.writeHead(200, {"Content-type":"text/html"});
@@ -9,3 +9,6 @@ function start(resp){
 }
 
 exports.start = start;
+
+
+console.log(data);
