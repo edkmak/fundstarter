@@ -1,14 +1,16 @@
 var fs = require("fs");
-var filename = './fundstarter/public/index.html';
-var data = fs.readFileSync(filename,'utf8');
+var http = require("http");
 
-function start(resp){
+var filename = __dirname + '/public/index.html';
+
+var data = fs.readFileSync(filename, 'utf8');
+
+var server = http.createServer(function(request, resp){
     resp.writeHead(200, {"Content-type":"text/html"});
     resp.write(data);
     resp.end();
-}
+});
 
-exports.start = start;
+server.listen(8080);
 
-
-console.log(data);
+console.log("Server listening");
