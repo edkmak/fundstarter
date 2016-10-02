@@ -11,6 +11,6 @@ var server = http.createServer(function(request, resp){
     resp.end();
 });
 
-server.listen(3000, '0.0.0.0');
+server.listen(8080, '0.0.0.0');
 
 console.log("Server listening");
