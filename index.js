@@ -11,6 +11,6 @@ var server = http.createServer(function(request, resp){
     resp.end();
 });
 
-server.listen(8080);
+server.listen(process.envc.PORT, '0.0.0.0');
 
 console.log("Server listening");
