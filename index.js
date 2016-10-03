@@ -35,7 +35,7 @@ fs.stat(filename, function(err, stats){
 		resp.writeHead(200, {"Content-type":"text/html"});
 		resp.write(data);
 		resp.end();
-	    }).listen(8080,'0.0.0.0');
+	    }).listen(process.env.PORT,5000);
             fs.close(fd);
 
         });
